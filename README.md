@@ -1,38 +1,47 @@
-# 终端编程手册
+# Claude Code 中文教程
 
-## 项目说明
+## 安装 Claude Code
 
-这个仓库是关于**终端编程**工具的笔记集合，记录了各种 AI 驱动的终端工具的使用方法、配置说明和最佳实践。旨在帮助开发者更好地理解和使用这些终端编程工具。这是一种由 `编辑器` 到 `终端`开发方式的转变。
+```bash
+curl -fsSL https://claude.ai/install.sh | bash # macOS/linux 推荐的方式
 
-**重要提示**：随着基础模型的能力更新、以及 Agentic 能力提升、编辑器/IDE 的产品形态正在被 CLI 挑战，当模型能力足够强的时候，CLI 是最佳的形态吗？没人知道。。
+brew install --cask claude-code # homebrew
 
-[ 大语言模型厂商 ] OpenAI 的 Codex （OpenAI 未上市 但是估值已达到千亿美元）
+irm https://claude.ai/install.ps1 | iex # Windows 用户 是的，CC 可以在Windows 上稳定运行
 
-[ 大语言模型厂商 ] Anthropic 的 Claude Code （未上市 Anthropic 估值已达到千亿美元）
+npm install -g @anthropic-ai/claude-code # 依赖  Node.js 前端生态的一个运行时环境
+```
 
-[ 大语言模型厂商 ] 谷歌的 Gemini CLI （谷歌上市公司：市值一度迈上 3 万亿）
+## 有关 AI 编程
 
-[ 大语言模型厂商 ] 阿里巴巴 阿里云团队的 Qwen Code （源自 Gemini CLI）
+这是一种由 `编辑器` 到 `终端`开发方式的转变。`Agentic Coding` 指的是代理编码。随着基础模型的能力更新、以及 Agentic 能力提升、编辑器/IDE 的产品形态正在被 CLI 挑战，当模型能力足够强的时候，CLI 是最佳的形态吗？答案是：没人知道
 
-[ 大语言模型厂商 ] 腾讯 腾讯云团队的 CodeBuddy Code
+## 作者的主观偏见
 
-[ -- ] Warp 终端
+1. 目前 Codex 和 Claude Code 可以作为主力
 
-[ -- ] Ampcode
+2. 终端可以使用 ghostty
 
-[ -- ] Opencode（开源）
+3. 一方的产品正在成为主流。我们知道的几家模型厂商 Anthropic 出了 Claude Code、OpenAI 出了 Codex、谷歌出了 Gemini CLI 、Kimi 出了 Kimi CLI 、阿里出了 Qwen Code
 
-[ -- ] Crush
+## Opus vs Sonnet vs Haiku
 
-## 主观偏见
+- Opus (杰作/巨著) 在拉丁语中，“Opus” 意为“作品”，尤指重要的、大规模的艺术或音乐创作，常用来指代大师的“杰作”或“巨著”。
 
-1、偏见 1: 目前 Codex 和 Claude Code 可以作为主力
+- Sonnet (十四行诗) Sonnet” 是一种结构严谨的抒情诗体，通常有 14 行 常用于表达爱情、美感或哲理。
 
-2、偏见 2: 终端可以使用 iTerm2
+- Haiku (俳句) “Haiku” 是一种日本古典短诗，通常由三句十七音组成（按 5-7-5 的音节排列）。
 
-3、偏见 3: 一方的产品正在成为主流。我们知道的几家模型厂商 Anthropic 出了 Claude Code、OpenAI 出了 Codex、谷歌出了 Gemini CLI 、据传闻 xAI 也会出一个编码的产品
+## Claude Code 下载的趋势
 
-# Codex
+Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在下述网站查阅安装趋势
+
+- https://npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions
+- https://npmtrends.com/@anthropic-ai/claude-code
+- https://npm-stat.com/charts.html?package=%40anthropic-ai%2Fclaude-code&from=2025-02-23&to=2025-07-05
+- https://npmcharts.com/compare/@anthropic-ai/claude-code?interval=1&log=false
+
+## CC vs Codex
 
 Codex CLI 是 2025 年 4 月 16 日 先发的，然后使用 Rust 重写。
 
@@ -44,207 +53,20 @@ Codex 是 2025 年 5 月 16 日后发的，跑在浏览器中的。
 
 当时是基于 o4-mini 进行微调，主要面向 Codex CLI 应用。
 
-## 使用
-
-- Ask Mode fix bug 检查一下项目中的代码库，有没有其他地方有类似的问题
-
-- 总结一下，请求从入口到返回响应，代码是如何流转的
-
-- 总结一下这个文件，方便我明天能接着今天的工作继续
-
-- 需要给它清晰的结构、充足的上下文，以及迭代的空间
-
-# Claude Code / CC / ClaudeCode
-
-Tips：有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
-
-1、 切换模型的方式： /model 、--model 或者在环境变量中
-
-2、/status 查看当前的模型
-
-3、能力由强到弱：claude-opus-4-1-20250805、claude-opus-4-20250514、claude-sonnet-4-20250514、claude-3-7-sonnet-20250219、claude-3-5-haiku-20241022
-
-- Opus (杰作/巨著) 在拉丁语中，“Opus” 意为“作品”，尤指重要的、大规模的艺术或音乐创作，常用来指代大师的“杰作”或“巨著”。
-
-- Sonnet (十四行诗) Sonnet” 是一种结构严谨的抒情诗体，通常有 14 行 常用于表达爱情、美感或哲理。
-
-- Haiku (俳句) “Haiku” 是一种日本古典短诗，通常由三句十七音组成（按 5-7-5 的音节排列）。
-
-4、20 美元的是不能使用 opus 的
-
-5、切换模型：
-
-claude --model claude-opus-4-1-20250805
-
-claude --model claude-opus-4-20250514
-
-claude --model claude-sonnet-4-20250514
-
-claude --model claude-3-7-sonnet-20250219
-
-claude --model claude-3-5-haiku-20241022
-
-6、价格的选择
-
-- pro 20 美元 一个月 用不了最强的 opus
-
-- max 100 美元 5 倍 的 pro
-
-- max 200 美元 20 倍 的 pro
-
-## Claude Code + Kimi K2
-
-找到 ~/.claude/settings.json 并且打开
-
-说正题：Claude Code + Kimi 怎么配置？怎么搞？很简单，没心智负担。
-
-[ 1 ] 你已经安装了 Claude Code ，如果你没安装你用个啥。
-
-[ 2 ] 你的 Claude Code 没充值，或者到期了，你都买了 20 美元的 Pro，你为啥使用 Kimi K2。
-
-[ 3 ] 你得充值一下 Kimi , 充个 50 元人民币吧，先用着，慢，没事，先用着。
-
-[ 4 ] 找一下你的 key ，这是 env.ANTHROPIC_AUTH_TOKEN 的值
-
-[ 5 ] 找一下 base URL 的值，我去，你在月之暗面的哪个域名下买的，你就用哪个啊 base URL 啊。人家两个域名呢：
-https://api.moonshot.ai/anthropic
-https://api.moonshot.cn/anthropic
-这个是 env.ANTHROPIC_BASE_URL 值。
-
-[ 6 ] 找到 CC 的配置文件 ~/.claude/settings.json
-配置进去就行了呀。
-
-![alt text](image.png)
-
-## Claude Code 本质
-
-Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在下述网站查阅安装趋势
-
-- https://npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions
-- https://npmtrends.com/@anthropic-ai/claude-code
-- https://npm-stat.com/charts.html?package=%40anthropic-ai%2Fclaude-code&from=2025-02-23&to=2025-07-05
-- https://npmcharts.com/compare/@anthropic-ai/claude-code?interval=1&log=false
-
-# Gemini CLI
+## CC vs Gemini CLI
 
 在 2025 年 06 月 25 的时候，谷歌发了 Gemini CLI。虽然谷歌这一路走的很飘逸：在 AI 编程的这个产品方向上一会又是在浏览器中的，一会又在终端的，一会又是插件呢，一会又扩展。不过作为 Claude Code 竞品，不发也不行。
 
-因为是终端操作，所以终端记得代理一下，然后代理节点开一下。因为是 npm 包，你需要在终端执行：
+因为是终端操作，所以终端记得代理一下，然后代理节点开一下。
+
+安装一下：
 
 ```sh
-npm install -g @google/gemini-cli@latest。
-```
+npm install -g @google/gemini-cli
 
-有的小伙伴可能不是前端，我来解释一下：
+npm install -g @google/gemini-cli@latest
 
-npm 是个 Node.js 的官方的包管理 https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager
-install 安装 ，-g 是全局安装的意思， @latest 总是安装最新的就好
+npm install -g @google/gemini-cli@preview
 
-@google/gemini-cli 是一个包https://npmjs.com/package/@google/gemini-cli?activeTab=versions
-
-接着你执行 gemini 。可能 Gemini 登录的时候有问题。
-echo 'export GOOGLE_CLOUD_PROJECT="你的 ID"' >> ~/.bashrc
-
-把 GOOGLE_CLOUD_PROJECT 写到环境变量中即可。
-
-主要是执行一些翻译任务。不仅仅是代码。
-
-第一性原理：您并不是在使用 Amp——您是在直接与模型对话
-
-# Qwen Code
-
-系统看过阿里的文档就知道：一直以来都有个代码模型：[通义千问 Coder]
-那么这次最新的更新是：稳定版是 qwen3-coder-plus，快照版是 qwen3-coder-plus-2025-07-22。
-
-- qwen3-coder-plus 的能力 等于 qwen3-coder-plus-2025-07-22
-- 每日 2,000 次请求
-- 每分钟 60 次请求的速率限制
-- 在解析器级别进行适配，以更好地支持 Qwen-Coder 模型
-
-备注：早期的配置还是有点麻烦的，现在官方直接提供了 OAuth 认证。
-
-# Opencode
-
-## Opencode + Kimi
-
-```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "moonshot": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Moonshot AI",
-      "options": {
-        "baseURL": "https://api.moonshot.cn/v1",
-        "apiKey": "sk-xxxxx"
-      },
-      "models": {
-        "kimi-k2-turbo-preview": {
-          "name": "Kimi K2 Turbo"
-        }
-      }
-    }
-  }
-}
-```
-
-# Warp
-
-可以直接访问 https://docs.warp.dev/ 然后右下角 `Ask Kapa AI` 输入 “terminal 与 agent 与 anto detection 什么区别”
-
-Terminal：传统命令行界面，执行 shell 命令。
-
-Agent：AI 协作者，理解自然语言，自动执行和修正多步任务。
-
-Auto-detection：本地检测输入内容，自动在 terminal 和 agent 模式间切换。
-
-# Amp
-
-Amp 是 Sourcegraph 构建的一个代理式编码工具。an agentic coding tool
-
-```sh
-npm install -g @sourcegraph/amp@latest
-```
-
-# Crush
-
-Crush 的默认模型列表由 Catwalk 管理。如果是 Crush + GLM 的配置如下：
-
-```json
-{
-  "name": "Z.AI",
-  "id": "zai",
-  "api_key": "$ZAI_API_KEY",
-  "api_endpoint": "https://api.z.ai/api/paas/v4",
-  "type": "openai",
-  "default_large_model_id": "glm-4.5",
-  "default_small_model_id": "glm-4.5-air",
-  "models": [
-    {
-      "id": "glm-4.5",
-      "name": "GLM-4.5",
-      "cost_per_1m_in": 0.6,
-      "cost_per_1m_out": 2.2,
-      "cost_per_1m_in_cached": 0.11,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 98304,
-      "can_reason": true,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    },
-    {
-      "id": "glm-4.5-air",
-      "name": "GLM-4.5-Air",
-      "cost_per_1m_in": 0.2,
-      "cost_per_1m_out": 1.1,
-      "cost_per_1m_in_cached": 0.03,
-      "context_window": 131072,
-      "default_max_tokens": 98304,
-      "can_reason": true,
-      "has_reasoning_efforts": false,
-      "supports_attachments": false
-    }
-  ]
-}
+npm install -g @google/gemini-cli@nightly
 ```
