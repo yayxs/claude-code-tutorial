@@ -41,6 +41,32 @@ Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在
 - https://npm-stat.com/charts.html?package=%40anthropic-ai%2Fclaude-code&from=2025-02-23&to=2025-07-05
 - https://npmcharts.com/compare/@anthropic-ai/claude-code?interval=1&log=false
 
+## 终端 CLI 更强大
+
+两者底层能力一致，Extension 更适合喜欢图形界面的用户，CLI 更适合终端用户和需要高级功能的场景
+
+在这里我推荐直接在终端中使用
+
+## CC 问自己
+
+Claude 还可以访问其自身的文档，并能回答有关其功能和能力的问题。当对 Claude Code 自身有疑问的时候，可以问，比如：
+
+```sh
+Claude Code 你联网是怎么实现的？
+```
+
+## 扩展思考
+
+加强语气的短语，例如“keep hard”（持续努力思考）、“think more”（多思考）、“think a lot”（深入思考）或“think longer”（更长时间地思考），会触发更深层次的思考
+
+## 状态栏配置
+
+只需要： Claude code 你能帮我设置一下 状态行配置 吗？ Status line configuration
+
+## 小技巧
+
+- 从大的问 到小的，从宽泛的问到细节的，从高问到低的
+
 ## CC vs Codex
 
 Codex CLI 是 2025 年 4 月 16 日 先发的，然后使用 Rust 重写。
