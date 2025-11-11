@@ -55,9 +55,71 @@ Claude 还可以访问其自身的文档，并能回答有关其功能和能力�
 Claude Code 你联网是怎么实现的？
 ```
 
+## 内置 Slash Commands
+
+Claude Code 提供了 **34 个内置命令**，按功能分类如下：
+
+### 📋 会话与账户管理
+
+- `/exit` - 退出 REPL 环境
+- `/login` - 切换 Anthropic 账户
+- `/logout` - 退出当前账户
+- `/help` - 显示帮助信息
+
+### 💬 对话管理
+
+- `/clear` - 清除所有对话历史（开始新任务时清空上下文）
+- `/compact [instructions]` - 压缩对话历史（对话过长时精简上下文）
+- `/rewind` - 回退对话和/或代码
+- `/export [filename]` - 导出对话到文件或剪贴板
+- `/memory` - 编辑 CLAUDE.md 记忆文件（设置持久化上下文）
+
+### 🤖 模型与配置
+
+- `/model` - 切换 AI 模型（Sonnet、Opus、Haiku）
+- `/config` - 打开设置界面
+- `/status` - 显示版本、模型、账户和连接状态
+- `/statusline` - 配置状态栏 UI
+- `/terminal-setup` - 安装 Shift+Enter 换行绑定（iTerm2/VSCode）
+- `/vim` - 激活 vim 模式
+
+### 🛠️ 开发工具
+
+- `/add-dir` - 扩展工作目录（授予更多目录访问权限）
+- `/review` - 请求代码审查
+- `/bug` - 提交 bug 报告给 Anthropic
+- `/doctor` - 检查安装健康状态
+
+### 📊 监控与分析
+
+- `/context` - 可视化 token 使用情况
+- `/cost` - 显示 token 使用统计
+- `/usage` - 显示计划限额和速率状态（订阅用户）
+- `/todos` - 列出当前任务项
+
+### 🚀 高级功能
+
+- `/agents` - 管理自定义 AI 子代理
+- `/bashes` - 列出和管理后台任务
+- `/hooks` - 管理工具事件配置
+- `/init` - 初始化项目（创建 CLAUDE.md）
+- `/mcp` - 管理 MCP 服务器连接
+- `/sandbox` - 启用沙箱 bash 工具
+- `/permissions` - 配置访问控制
+- `/privacy-settings` - 更新隐私配置
+- `/pr_comments` - 显示 PR 反馈
+
+### 💡 常用场景推荐
+
+1. **开始新项目**：`/init` → `/memory`
+2. **上下文过大**：`/context` → `/compact`
+3. **切换任务**：`/clear` 或 `/rewind`
+4. **性能监控**：`/cost` → `/usage`
+5. **遇到问题**：`/doctor` → `/bug`
+
 ## 扩展思考
 
-加强语气的短语，例如“keep hard”（持续努力思考）、“think more”（多思考）、“think a lot”（深入思考）或“think longer”（更长时间地思考），会触发更深层次的思考
+加强语气的短语，例如"keep hard"（持续努力思考）、"think more"（多思考）、"think a lot"（深入思考）或"think longer"（更长时间地思考），会触发更深层次的思考
 
 ## 状态栏配置
 
