@@ -180,3 +180,44 @@ npm install -g @google/gemini-cli@preview
 
 npm install -g @google/gemini-cli@nightly
 ```
+
+## MCP
+
+1. 文档和知识获取类
+
+- Context7: 获取最新库文档
+- Exa: 搜索代码和文档
+- Web search/fetch: 获取实时信息
+
+2. 开发工具集成类
+
+- GitHub: 代码托管和协作
+- GitLab: 类似 GitHub
+- Linear: 项目管理
+- Jira: 项目管理
+
+3. 数据库操作类
+
+- PostgreSQL MCP
+- SQLite MCP
+- MongoDB MCP
+
+4. 浏览器自动化类
+
+- Playwright 和 Puppeteer 提供强大的浏览器交互能力，可以实现自动化测试、网页抓取和交互场景。Chrome DevTools MCP
+  则帮助深入调试和性能分析。
+
+5. 云服务集成类
+
+- AWS、Google Drive 和 Slack MCP 实现云端资源管理和协作，极大地扩展了开发工作流程。
+
+6. 本地开发增强类
+
+- Filesystem MCP 扩展文件操作能力
+- Memory MCP 提供跨会话记忆
+- Sequential thinking MCP 优化思考和推理过程
+
+7. AI 增强类
+
+- Perplexity MCP 提供更智能的搜索
+- Claude Desktop prompts 帮助管理和优化提示词
